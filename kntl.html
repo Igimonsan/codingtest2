@@ -1,10 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="id">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kentang Goreng Crispy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pendidikan: Kentang Goreng</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -12,208 +11,72 @@
       padding: 30px 15px;
       text-align: center;
       margin: 0;
-      min-height: 100vh;
-      background-size: cover;
-      background-position: center;
     }
 
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-      padding: 25px;
+    .container {
       max-width: 800px;
       margin: auto;
-      animation: fadeInUp 0.8s ease-out forwards;
-      opacity: 0;
-      transform: translateY(40px);
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    h1 {
-      color: #ff9900;
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      color: #444;
-      margin-bottom: 15px;
-    }
-
-    .product-img {
-      width: 100%;
-      max-width: 360px;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    .btn {
-      padding: 8px 14px;
-      margin: 3px;
-      font-size: 14px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .order-btn {
-      background-color: #ff9900;
-      color: white;
-    }
-
-    .order-btn:hover {
-      background-color: #e08800;
-    }
-
-    .toggle-btn {
-      background-color: #ddd;
-    }
-
-    .toggle-btn:hover {
-      background-color: #bbb;
-    }
-
-    .bmc-content {
-      text-align: left;
-      margin-top: 20px;
-      display: none;
-      animation: fadeIn 0.5s ease-in;
-      font-size: 14px;
-    }
-
-    .bmc-content h3 {
-      margin-top: 16px;
-      color: #333;
-      font-size: 16px;
-    }
-
-    .bmc-content ul {
-      margin-left: 18px;
-      padding-left: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      animation: fadeIn 1s ease-in;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
-    #menu-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-      justify-content: center;
-      margin-top: 20px;
-      opacity: 0;
-      animation: fadeInMenu 0.5s ease-in forwards;
-    }
-
-    @keyframes fadeInMenu {
-      to {
-        opacity: 1;
-      }
-    }
-
-    #judul-menu {
-      font-size: 20px;
+    h1 {
+      color: #d2691e;
+      font-size: 28px;
       margin-bottom: 10px;
-      grid-column: 1 / -1;
-      text-align: center;
-      font-weight: bold;
     }
+
+    h2 {
+      color: #444;
+      font-size: 20px;
+      margin-top: 30px;
+    }
+
+    p {
+      text-align: justify;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
   </style>
 </head>
-
 <body>
 
-  <div class="card">
-    <h1>Kentang Goreng Crispy</h1>
-    <p>Nikmati sensasi gurih dan renyah kentang goreng buatan kami! Cocok untuk semua suasana dan dijamin bikin nagih!</p>
-    <img class="product-img" src="https://github.com/Igimonsan/Image/blob/main/WhatsApp%20Image%202025-04-15%20at%2021.31.11_464c0cd9.jpg?raw=true" alt="Kentang Goreng">
-    <br><br>
+  <div class="container">
+    <h1>Mengenal Kentang Goreng</h1>
+    <p>Kentang goreng adalah salah satu makanan paling populer di seluruh dunia. Tapi tahukah kamu bagaimana asal-usul, cara pembuatan, dan nilai gizinya?</p>
 
-    <button class="btn order-btn" onclick="toggleMenu()">Pilih Menu</button>
-    <button class="btn toggle-btn" onclick="toggleDeskripsi()">Deskripsi Produk</button>
-    <button class="btn toggle-btn" onclick="toggleEdukasi()">Tentang Kentang Goreng</button>
+    <img src="https://github.com/Igimonsan/Image/blob/main/WhatsApp%20Image%202025-04-15%20at%2021.31.11_464c0cd9.jpg?raw=true" alt="Kentang Goreng"/>
 
-    <!-- Deskripsi Produk -->
-    <div class="bmc-content" id="deskripsi">
-      <h3>Deskripsi Produk</h3>
-      <p>Kentang goreng crispy kami dibuat dari kentang pilihan dengan bumbu khas yang meresap sempurna. Digoreng dengan teknik khusus sehingga menghasilkan tekstur renyah di luar dan lembut di dalam.</p>
-      <h3>Varian Rasa:</h3>
-      <ul>
-        <li>Keju</li>
-        <li>Balado Pedas</li>
-        <li>BBQ</li>
-        <li>Rumput Laut</li>
-      </ul>
-    </div>
+    <h2>1. Sejarah Singkat</h2>
+    <p>Kentang goreng diperkirakan berasal dari Belgia atau Prancis pada abad ke-17. Mereka mulai menggoreng irisan kentang sebagai pengganti ikan saat musim dingin. Seiring waktu, makanan ini menyebar dan menjadi camilan global.</p>
 
-    <!-- Edukasi Produk -->
-    <div class="bmc-content" id="edukasi">
-      <h3>Pengetahuan Seputar Kentang Goreng</h3>
-      <p><strong>Asal-usul:</strong> Kentang goreng pertama kali populer di Belgia dan Perancis, dan kini menjadi camilan favorit di seluruh dunia.</p>
-      <p><strong>Manfaat Kentang:</strong> Kentang mengandung karbohidrat, vitamin C, dan serat, serta cocok menjadi sumber energi harian.</p>
-      <p><strong>Tips Menikmati:</strong> Kentang goreng paling nikmat disantap saat hangat dengan saus favorit seperti keju, sambal, atau mayones.</p>
-    </div>
+    <h2>2. Proses Pembuatan</h2>
+    <p>Langkah-langkah membuat kentang goreng yang baik meliputi: memilih kentang berkualitas, mengiris tipis, merendam dalam air dingin, lalu menggoreng dua kali—pertama untuk memasak, kedua untuk kerenyahan.</p>
 
-    <!-- Menu Pilihan -->
-    <div id="menu-container" style="display: none;">
-      <h2 id="judul-menu">Pilih Menu Kentang Goreng</h2>
-      <button class="btn order-btn" onclick="order('Original - Kecil')">Original - Kecil (Rp12000)</button>
-      <button class="btn order-btn" onclick="order('Original - Besar')">Original - Besar (Rp18000)</button>
-      <button class="btn order-btn" onclick="order('Keju - Kecil')">Keju - Kecil (Rp12000)</button>
-      <button class="btn order-btn" onclick="order('Keju - Besar')">Keju - Besar (Rp17000)</button>
-      <button class="btn order-btn" onclick="order('Balado Pedas - Kecil')">Balado Pedas - Kecil (Rp13000)</button>
-      <button class="btn order-btn" onclick="order('Balado Pedas - Besar')">Balado Pedas - Besar (Rp18000)</button>
-      <button class="btn order-btn" onclick="order('BBQ - Kecil')">BBQ - Kecil (Rp13000)</button>
-      <button class="btn order-btn" onclick="order('BBQ - Besar')">BBQ - Besar (Rp18000)</button>
-      <button class="btn order-btn" onclick="order('Rumput Laut - Kecil')">Rumput Laut - Kecil (Rp14000)</button>
-      <button class="btn order-btn" onclick="order('Rumput Laut - Besar')">Rumput Laut - Besar (Rp19000)</button>
-    </div>
+    <h2>3. Nilai Gizi</h2>
+    <p>Kentang adalah sumber karbohidrat yang baik, serta mengandung vitamin C, kalium, dan serat. Namun, penggorengan dengan minyak berlebih dapat menambah lemak dan kalori. Maka dari itu, konsumsilah dengan bijak.</p>
+
+    <h2>4. Tips Sehat</h2>
+    <p>Coba gunakan metode air fryer atau minyak sehat seperti minyak zaitun. Tambahkan sedikit garam, dan hindari saus tinggi gula untuk pilihan yang lebih sehat.</p>
+
+    <h2>5. Fakta Menarik</h2>
+    <p>Di Amerika Serikat, 13 Juli diperingati sebagai Hari Kentang Goreng Nasional! Negara mana yang mengonsumsi paling banyak kentang goreng? Jawabannya: Amerika Serikat dan Belgia.</p>
   </div>
-
-  <script>
-    function toggleDeskripsi() {
-      var deskripsi = document.getElementById("deskripsi");
-      var menu = document.getElementById("menu-container");
-      var edukasi = document.getElementById("edukasi");
-      deskripsi.style.display = deskripsi.style.display === "none" ? "block" : "none";
-      menu.style.display = "none";
-      edukasi.style.display = "none";
-    }
-
-    function toggleMenu() {
-      var menu = document.getElementById("menu-container");
-      var deskripsi = document.getElementById("deskripsi");
-      var edukasi = document.getElementById("edukasi");
-      menu.style.display = menu.style.display === "none" ? "grid" : "none";
-      deskripsi.style.display = "none";
-      edukasi.style.display = "none";
-    }
-
-    function toggleEdukasi() {
-      var edukasi = document.getElementById("edukasi");
-      var deskripsi = document.getElementById("deskripsi");
-      var menu = document.getElementById("menu-container");
-      edukasi.style.display = edukasi.style.display === "none" ? "block" : "none";
-      deskripsi.style.display = "none";
-      menu.style.display = "none";
-    }
-
-    function order(menuItem) {
-      var whatsappLink = "https://wa.me/6285777598395?text=" + encodeURIComponent("Saya ingin memesan kentang goreng crispy: " + menuItem);
-      window.location.href = whatsappLink;
-    }
-  </script>
 
 </body>
 </html>
